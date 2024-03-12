@@ -50,7 +50,7 @@ header{
 }
 
 main{
-    height: 625px;
+    height: auto;
     width: 100%;
     background-color:#FDF7E4;
 }
@@ -71,47 +71,48 @@ h1 {
     font-size: 22px;
 }
 
+.section1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+}
+
+.parrafo {
+    display: grid;
+    align-content: center;
+    justify-content: center;
+}
+
 .item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.item3 {
+    padding-bottom: 25px;
+}
+
+img {
     height: 300px;
     width: 300px;
     background-color: #940B92;
     border: 3px solid #3C0753;
-    margin-top: 50px;
-}
-
-.section1 {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-}
-
-.section2 {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    margin: 25px;
-    padding-left: 12px;
-    padding-right: 12px;
 }
 
 .nosotros1 {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    margin: 75px;
-}
-
-.fotoDiseño {
-    height: 300px;
-    width: 300px;
-    background-color: #940B92;
-    border: 3px solid #3C0753;
+    padding: 35px;
 }
 
 .parrafoDiseño {
     height: auto;
     width: 294px;
     font-size: 22px;
+    padding-bottom: 20px;
+    color: #940B92;
 }
 
 .contacto1 {
@@ -132,13 +133,6 @@ h1 {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-}
-
-.fotoC {
-    height: 300px;
-    width: 300px;
-    background-color: #940B92;
-    border: 3px solid #3C0753;
 }
 
 .boton {
@@ -163,7 +157,7 @@ h1 {
 }
 
 .main2 {
-    height: 625px;
+    height: auto;
     width: 100%;
     background-color: #D9D7F1;
 }
@@ -172,8 +166,7 @@ h1 {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    padding: 75px;
-    padding-top: 125px;
+    padding: 35px;
 }
 
 .parrafoNosotros2 {
@@ -182,11 +175,63 @@ h1 {
     font-size: 22px;
 }
 
-.localicacionNosotros1 {
-    height: 300px;
-    width: 300px;
-    background-color: #940B92;
-    border: 3px solid #3C0753;
+.galeria {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: repeat(2, 325px);
+    padding: 20px;
+    grid-gap: 20px;
+}
+
+.fotos {
+    border: #3C0753 2px solid;
+    background-color: #FDF7E4;
+    background-size: cover;
+    background-position: center;
+    border-radius: 15px;
+    filter: grayscale(80%);
+    transition: all 0.9s;
+}
+
+.fotos:hover{
+    filter: grayscale(0%);
+    transform: scale(1.09);
+}
+
+.fotosp1 {
+    background-image: url(../imagenes/WhatsApp\ Image\ 2024-02-11\ at\ 9.42.05\ PM.jpeg);
+    grid-column: 1/2;
+    grid-row: 1/3;
+}
+
+.fotosp2 {
+    background-image: url(../imagenes/imagen\ 1.jpg);
+    grid-column: 2/3;
+    grid-row: 1/2;
+}
+
+.fotosp3 {
+    background-image: url(../imagenes/imagen\ 2.jpg);
+    grid-column: 3/4;
+    grid-row: 1/2;
+}
+
+.fotosp4 {
+    background-image: url(../imagenes/imagen\ 4.jpg);
+    grid-column: 2/3;
+    grid-row: 2/3;
+}
+
+.fotosp5 {
+    background-image: url(../imagenes/WhatsApp\ Image\ 2024-03-10\ at\ 6.51.05\ PM.jpeg);
+    grid-column: 3/4;
+    grid-row: 2/3;
+}
+
+.fotosp6 {
+    background-image: url(../imagenes/WhatsApp\ Image\ 2024-03-10\ at\ 6.52.10\ PM.jpeg);
+    grid-column: 4/5;
+    grid-row: 1/3;
 }
 
 footer {
@@ -219,4 +264,128 @@ footer p{
     background-color: #CDF0EA;
     border-radius: 50%;
     text-align: center;
+}
+
+@media only screen and (max-width:1000px) {
+    header {
+        font-size: 25px;
+    }
+
+    .menu li a{
+        padding: 5px;
+        margin: 0px;
+    }
+}
+
+@media only screen and (max-width:750px) {
+    header {
+        height: auto;
+    }
+    .menu ul {
+        justify-content: flex-start;
+        display: block;
+    }
+    .menu li {
+        padding: 10px;
+    }
+}
+
+@media only screen and (max-width:600px) {
+    .section1 {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(6, 350px);
+    }
+}
+
+@media only screen and (max-width:850px) {
+    .galeria {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: repeat(4, 325px);
+    }
+    
+    .fotosp3 {
+        grid-column: 1/2;
+        grid-row: 3/4;
+    }
+
+    .fotosp5 {
+        grid-column: 1/2;
+        grid-row: 4/5;
+    }
+
+    .fotosp6 {
+        grid-column: 2/3;
+        grid-row: 3/6;
+    }
+}
+
+@media only screen and (max-width:440px) {
+    .galeria {
+        grid-template-columns: 1fr ;
+        grid-template-rows: repeat(8, 325px);
+    }
+
+    .fotosp2 {
+        grid-column: 1/2;
+        grid-row: 5/6;
+    }
+
+    .fotosp4 {
+        grid-column: 1/2;
+        grid-row: 6/7;
+    }
+
+    .fotosp6 {
+        grid-column: 1/2;
+        grid-row: 7/9;
+    }
+}
+
+@media only screen and (max-width:700px) {
+    .nosotros1 {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 350px;
+    }
+
+    .fotoDiseño {
+        display: grid;
+        align-content: center;
+        justify-content: center;
+    }
+    .parrafoDiseño {
+        display: grid;
+        align-content: center;
+        justify-content: center;
+        width: auto;
+    }
+
+    .nosotros2 {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 350px;
+    }
+    .localicacionNosotros1 {
+        display: grid;
+        align-content: center;
+        justify-content: center;
+        width: auto;
+    }
+}
+
+@media only screen and (max-width:920px) {
+    .contacto1 {
+        display: grid;
+        align-content: center;
+        justify-content: center;
+        width: auto;
+    }
+
+    .imagenesC {
+        display: grid;
+        align-content: center;
+        justify-content: center;
+        width: auto;
+    }
 }
