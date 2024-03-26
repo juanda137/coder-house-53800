@@ -25,6 +25,7 @@ header{
 .menu ul {
     justify-content: flex-end;
     display: flex;
+    padding-left: 0px;
 }
 
 .menu ul li {
@@ -157,6 +158,13 @@ img {
     padding-bottom: 20px;
     color: $colorLetras;
     text-align: center;
+}
+
+.mapa{
+    width: 294px;
+    height: 294px;
+    border: 3px solid $colorMantenido;
+    border-radius: 15px;
 }
 
 .contacto1 {
@@ -340,6 +348,11 @@ footer p{
     .parrafo {
         margin: 0px;
     }
+
+    .parrafoNosotros2 {
+        width: auto;
+    }
+    
 }
 
 @media only screen and (max-width:850px) {
