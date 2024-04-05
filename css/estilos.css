@@ -85,6 +85,7 @@ h1 {
   display: grid;
   align-content: center;
   justify-content: center;
+  height: auto;
 }
 
 .item {
@@ -354,7 +355,7 @@ footer p {
     grid-row: 3/5;
   }
 }
-@media only screen and (max-width: 440px) {
+@media only screen and (max-width: 500px) {
   .galeria {
     grid-template-columns: 1fr;
     grid-template-rows: repeat(8, 325px);
@@ -430,7 +431,12 @@ footer p {
   .paddingF1 {
     padding-right: 10px;
   }
-  .paddingF3 {
+  .paddingF2 {
     padding-left: 10px;
+  }
+}
+@media only screen and (max-width: 700px) {
+  .section1 {
+    grid-template-rows: repeat(3, 350px auto);
   }
 }/*# sourceMappingURL=estilos.css.map */
